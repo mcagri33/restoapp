@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CastleController;
 use App\Http\Controllers\Castle\CastleProfileController;
+use App\Http\Controllers\Castle\CategoryController;
+use App\Http\Controllers\Castle\ReservationController;
+use App\Http\Controllers\Castle\TableController;
+use App\Http\Controllers\Castle\MenuController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +44,32 @@ Route::group(['prefix' => 'castle','middleware'=>'castle'], function (){
         ->name('update.change.password');
 });
 
+Route::group(['prefix' => 'castle/category','middleware'=>'castle'], function (){
+
+    Route::get('/index',[CategoryController::class,'index'])
+        ->name('castle.category.index');
+});
+
+Route::group(['prefix' => 'castle/menu','middleware'=>'castle'], function (){
+
+    Route::get('/index',[MenuController::class,'index'])
+        ->name('castle.menu.index');
+});
+
+Route::group(['prefix' => 'castle/table','middleware'=>'castle'], function (){
+
+    Route::get('/index',[TableController::class,'index'])
+        ->name('castle.table.index');
+});
+
+Route::group(['prefix' => 'castle/reservation','middleware'=>'castle'], function (){
+
+    Route::get('/index',[ReservationController::class,'index'])
+        ->name('castle.reservation.index');
+});
+
+
+/* Store Route */
 
 Route::get('/', function () {
     return view('welcome');
