@@ -59,58 +59,35 @@
 
             <ul id="side-menu">
 
-                <li class="menu-title">Navigation</li>
+                <li class="menu-title">@lang('sidebar.dashboard')</li>
 
                 <li>
-                    <a href="index.html">
+                    <a href="{{route('castle.dashboard')}}">
                         <i class="mdi mdi-view-dashboard-outline"></i>
-                        <span class="badge bg-success rounded-pill float-end">9+</span>
-                        <span> Dashboard </span>
+                        <span> @lang('sidebar.analitycs') </span>
                     </a>
                 </li>
 
-                <li class="menu-title mt-2">Modüller</li>
+                <li class="menu-title mt-2">@lang('sidebar.module')</li>
 
                 <li>
-                    <a href="#doktor" data-bs-toggle="collapse">
+                    <a href="#category" data-bs-toggle="collapse">
                         <i class="mdi mdi-email-outline"></i>
-                        <span> Doktorlar </span>
+                        <span> @lang('sidebar.category')  </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    <div class="collapse" id="doktor">
+                    <div class="collapse" id="category">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="#">Doktor Listele</a>
+                                <a href="#">@lang('sidebar.category_list')</a>
                             </li>
                             <li>
-                                <a href="#">Doktor Ekle</a>
+                                <a href="#">@lang('sidebar.category_add')</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-
-                <li class="menu-title mt-2">Site Ayarları</li>
-
-                <li>
-                    <a href="#dil" data-bs-toggle="collapse">
-                        <i class="mdi mdi-email-outline"></i>
-                        <span> Dil </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <div class="collapse" id="dil">
-                        <ul class="nav-second-level">
-                            <li>
-                                <a href="#">Dil Listele</a>
-                            </li>
-                            <li>
-                                <a href="#">Doktor Ekle</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-
-
+                
 
             </ul>
 
