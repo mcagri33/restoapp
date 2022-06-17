@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'castle' => [
+            'driver' => 'session',
+            'provider' => 'castles',
+        ],
     ],
 
     /*
@@ -63,6 +67,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'castles' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Castle::class,
         ],
 
         // 'users' => [
@@ -89,6 +97,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'castles' => [
+            'provider' => 'castles',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
