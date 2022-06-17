@@ -20,7 +20,6 @@ Route::post('castle/login/owner',[CastleController::class,'login'])->name('castl
 
 Route::group(['prefix' => 'castle','middleware'=>'castle'], function (){
 
-
     Route::get('/dashboard',[CastleController::class,'dashboard'])
         ->name('castle.dashboard');
     Route::get('/logout',[CastleController::class,'castleLogout'])
@@ -36,7 +35,6 @@ Route::group(['prefix' => 'castle','middleware'=>'castle'], function (){
         ->name('castle.profile.update');
     Route::get('/change/password',[CastleProfileController::class,'castleChangePassword'])
         ->name('castle.change.password');
-
     Route::post('update/change/password',[CastleProfileController::class,'castleUpdateChangePassword'])
         ->name('update.change.password');
 });
